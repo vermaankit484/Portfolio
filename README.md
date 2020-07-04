@@ -1,6 +1,6 @@
 # Google Software Product Sprint
 
-This repo contains the Ankit't projects you'll work on throughout SPS.
+This repo contains the Ankit's projects you'll work on throughout SPS.
 
 To get started:
 
