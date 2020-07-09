@@ -12,17 +12,57 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/**
- * Adds a random greeting to the page.
- */
-function addRandomGreeting() {
-  const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
 
-  // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+$(document).ready(function() {
+    $("#one").click(function() {
+        $("#two").removeClass("active");
+        $("#three").removeClass("active");
+        $("#four").removeClass("active");
+        $("#one").addClass("active");
+    });
+    $("#two").click(function() {
+        $("#one").removeClass("active");
+        $("#three").removeClass("active");
+        $("#four").removeClass("active");
+        $("#two").addClass("active");
+    });
+    $("#three").click(function() {
+        $("#two").removeClass("active");
+        $("#one").removeClass("active");
+        $("#four").removeClass("active");
+        $("#three").addClass("active");
+    });
+    $("#four").click(function() {
+        $("#two").removeClass("active");
+        $("#three").removeClass("active");
+        $("#one").removeClass("active");
+        $("#four").addClass("active");
+    });
+    $(window).scroll(function() {
+        if ($(window).scrollTop() == 0) {
+            $("nav").addClass("navclr");
+            console.log("First");
+        }
+        else if ($(window).scrollTop() > 0) {
+            $("nav").removeClass("navclr");
+            console.log("Done");
+        }
+    })
+});
 
-  // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
+let idx=0;
+let name='Ankit Verma';
+typeName = () => {
+    if (idx < name.length) {
+        document.getElementById('name').innerHTML += name.charAt(idx);
+        idx++;
+        setTimeout(typeName, 100);
+    }
 }
+
+
+setInterval(() => {
+    idx = 0;
+    document.getElementById('name').innerHTML='';
+    typeName();
+}, 7000);

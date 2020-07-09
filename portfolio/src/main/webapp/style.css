@@ -7,3 +7,35 @@
 #greeting-container {
   margin-top: 20px;
 }
+
+body {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: mintcream;
+}
+
+nav {
+    border-color: transparent !important;
+}
+
+.navclr {
+    background-color: transparent !important;
+}
+
+nav a {
+    color: mintcream !important;
+}
+
+.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus {
+    text-decoration: none !important;
+    background-color: darkslategray !important;
+}
+
+.bars:hover {
+    background-color: darkslategray !important;
+}
+
+#profile {
+    padding-top: 60px;
+}
