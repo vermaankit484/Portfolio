@@ -39,3 +39,14 @@ nav a {
 #profile {
     padding-top: 60px;
 }
+
+.content {
+    color: rgb(214,247,232);
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .navbar-collapse {
+        background-color: #222;
+    }
+}
