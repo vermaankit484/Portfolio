@@ -14,38 +14,21 @@
 
 
 $(document).ready(function() {
-    $("#one").click(function() {
-        $("#two").removeClass("active");
-        $("#three").removeClass("active");
-        $("#four").removeClass("active");
-        $("#one").addClass("active");
-    });
-    $("#two").click(function() {
-        $("#one").removeClass("active");
-        $("#three").removeClass("active");
-        $("#four").removeClass("active");
-        $("#two").addClass("active");
-    });
-    $("#three").click(function() {
-        $("#two").removeClass("active");
-        $("#one").removeClass("active");
-        $("#four").removeClass("active");
-        $("#three").addClass("active");
-    });
-    $("#four").click(function() {
-        $("#two").removeClass("active");
-        $("#three").removeClass("active");
-        $("#one").removeClass("active");
-        $("#four").addClass("active");
-    });
+    $("#bodynav li").click(function() {
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+        $("#headnav li").removeClass("active");
+    })
+    $("#headnav li").click(function() {
+        $(this).addClass("active");
+        $("#bodynav li").removeClass("active");
+    })
     $(window).scroll(function() {
         if ($(window).scrollTop() == 0) {
             $("nav").addClass("navclr");
-            console.log("First");
         }
         else if ($(window).scrollTop() > 0) {
             $("nav").removeClass("navclr");
-            console.log("Done");
         }
     })
 });
