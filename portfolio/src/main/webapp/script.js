@@ -49,3 +49,5 @@ setInterval(() => {
     document.getElementById('name').innerHTML='';
     typeName();
 }, 7000);
+
+document.addEventListener("DOMContentLoaded", typeName);

@@ -50,3 +50,11 @@ nav a {
         background-color: #222;
     }
 }
+
+hr {
+    border-top: 1px solid darkslategray;
+}
+
+#cubeimg {
+    padding-top: 40px;
+}
