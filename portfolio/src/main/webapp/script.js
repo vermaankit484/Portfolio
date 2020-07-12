@@ -14,23 +14,25 @@
 
 
 $(document).ready(function() {
-    $("#bodynav li").click(function() {
+    $(".bodynav li").click(function() {
         $(this).addClass("active");
         $(this).siblings().removeClass("active");
         $("#headnav li").removeClass("active");
     })
     $("#headnav li").click(function() {
         $(this).addClass("active");
-        $("#bodynav li").removeClass("active");
+        $(".bodynav li").removeClass("active");
     })
     $(window).scroll(function() {
-        if ($(window).scrollTop() == 0) {
+        var scrollVal = $(window).scrollTop(); 
+        if (scrollVal == 0) {
             $("nav").addClass("navclr");
         }
-        else if ($(window).scrollTop() > 0) {
+        else if (scrollVal > 0) {
             $("nav").removeClass("navclr");
         }
-    })
+    });
+    $('body').scrollspy({target: ".navbar", offset: 50}); 
 });
 
 let idx=0;
