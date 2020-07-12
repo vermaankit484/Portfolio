@@ -3,16 +3,56 @@
   <head>
     <meta charset="UTF-8">
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <meta charset="utf-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">  
+    <link rel="stylesheet" href="style.css"> 
   </head>
   <body>
-    <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
+    <nav class="navbar navbar-inverse navbar-fixed-top navclr">
+        <div class="container-fluid">
+            <div class="navbar-header" id="headnav">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+                </button>
+                <ul class="nav navbar-nav">
+                    <li class="bars active" id="one"><a class="navtext navbar-brand" href="#profile">About Me!</a></li>
+                </ul>
+            </div>
+            <div class="collapse navbar-collapse" id="bodynav">
+                <ul class="nav navbar-nav">
+                    <li class="bars"><a href="#">Projects</a></li>
+                    <li class="bars"><a href="#">Accomplishments</a></li>
+                    <li class="bars"><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="content">
+        <div class="container">
+            <div id="profile">
+                <h2 id="name"></h2>
+                <div class="row">
+                    <div class="col-sm-5">
+                        <img src="images/photo_2020-07.jpg" height="80%" width="70%">
+                    </div>
+                    <div class="col-sm-7">
+                        <div>I am pursuing Bachelors of Engineering CS from Chandigarh University, batch 2021. 
+                        Inclined towards Problem Solving, so can be mostly seen on platforms like Codeforces, Codechef, Atcoder with handle <span style="color: darkmagenta">verma_ankit484</span>.<br>
+                        Besides this, working on projects, I find Web Development as part of my interest. I always seek to find best out of an opportunity. Participating in Competitions, Hackathons experiencing the adrenaline rush is what motivates me the most.
+                        </div>
+                        <div id="cubeimg">
+                            <img src="images/cube-1.png" height="20%" width="20%">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>  
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> 
+    <script src="script.js"></script>
   </body>
 </html>

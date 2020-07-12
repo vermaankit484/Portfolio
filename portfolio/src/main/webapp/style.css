@@ -7,3 +7,54 @@
 #greeting-container {
   margin-top: 20px;
 }
+
+body {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: mintcream;
+}
+
+nav {
+    border-color: transparent !important;
+}
+
+.navclr {
+    background-color: transparent !important;
+}
+
+nav a {
+    color: mintcream !important;
+}
+
+.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus {
+    text-decoration: none !important;
+    background-color: darkslategray !important;
+}
+
+.bars:hover {
+    background-color: darkslategray !important;
+}
+
+#profile {
+    padding-top: 5em;
+}
+
+.content {
+    color: rgb(214,247,232);
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .navbar-collapse {
+        background-color: #222;
+    }
+}
+
+hr {
+    border-top: 1px solid darkslategray;
+}
+
+#cubeimg {
+    padding-top: 40px;
+}

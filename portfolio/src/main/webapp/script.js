@@ -12,17 +12,42 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/**
- * Adds a random greeting to the page.
- */
-function addRandomGreeting() {
-  const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
 
-  // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+$(document).ready(function() {
+    $("#bodynav li").click(function() {
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+        $("#headnav li").removeClass("active");
+    })
+    $("#headnav li").click(function() {
+        $(this).addClass("active");
+        $("#bodynav li").removeClass("active");
+    })
+    $(window).scroll(function() {
+        if ($(window).scrollTop() == 0) {
+            $("nav").addClass("navclr");
+        }
+        else if ($(window).scrollTop() > 0) {
+            $("nav").removeClass("navclr");
+        }
+    })
+});
 
-  // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
+let idx=0;
+let name='Ankit Verma';
+typeName = () => {
+    if (idx < name.length) {
+        document.getElementById('name').innerHTML += name.charAt(idx);
+        idx++;
+        setTimeout(typeName, 100);
+    }
 }
+
+
+setInterval(() => {
+    idx = 0;
+    document.getElementById('name').innerHTML='';
+    typeName();
+}, 7000);
+
+document.addEventListener("DOMContentLoaded", typeName);
