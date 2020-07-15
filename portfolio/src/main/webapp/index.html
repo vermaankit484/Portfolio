@@ -13,17 +13,17 @@
         <div class="container-fluid">
             <div class="navbar-header" id="headnav">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>                        
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
                 </button>
                 <ul class="nav navbar-nav">
                     <li class="bars active" id="one"><a class="navtext navbar-brand" href="#profile">About Me!</a></li>
                 </ul>
             </div>
-            <div class="collapse navbar-collapse" id="bodynav">
+            <div class="collapse navbar-collapse bodynav" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li class="bars"><a href="#">Projects</a></li>
+                    <li class="bars"><a href="#project">Projects</a></li>
                     <li class="bars"><a href="#">Accomplishments</a></li>
                     <li class="bars"><a href="#">Contact</a></li>
                 </ul>
@@ -45,6 +45,83 @@
                         </div>
                         <div id="cubeimg">
                             <img src="images/cube-1.png" height="20%" width="20%">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr width="100%">
+        <div class="container">
+            <div id="project">
+                <center><h1>Projects</h1></center>
+                <div class="row projectidx">
+                    <div class="col-sm-4">
+                        <h2>AlgoBox</h2>
+                        <br>
+                        <a href="https://algo-box.herokuapp.com/" target="_blank"><h4>Deployed App</h4></a>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="row">
+                            <div class="col-sm-1">
+                                <span><svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-app" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" d="M11 2H5a3 3 0 0 0-3 3v6a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V5a3 3 0 0 0-3-3zM5 1a4 4 0 0 0-4 4v6a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4H5z"/>
+</svg></span>
+                            </div>
+                            <div class="col-sm-11">
+                                <b>About Project</b>
+                                <div class="aboutme">A Utility tool to enhance the learning experience for competitive programmers bringing various
+learning resources at a place - Article Section, Profile Visualizer, Coding Calendar. Used various public APIs and implemented microservices for functionality.</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-1">
+                                <span><svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-code-slash" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" d="M4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0zm-.999-3.124a.5.5 0 0 1 .33.625l-4 13a.5.5 0 0 1-.955-.294l4-13a.5.5 0 0 1 .625-.33z"/>
+</svg></span>
+                            </div>
+                            <div class="col-sm-11">
+                                <b>Technology/Framework</b>
+                                <ul>
+                                    <li>Node.js</li>
+                                    <li>MongoDB</li>
+                                    <li>Ejs</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row projectidx" id="bwprojects">
+                    <div class="col-sm-4">
+                        <h2>Latent Dirichlet Allocation</h2>
+                        <br>
+                        <a href="https://github.com/vermaankit484/LDA" target="_blank"><h4>Repository</h4></a>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="row">
+                            <div class="col-sm-1">
+                                <span><svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-app" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" d="M11 2H5a3 3 0 0 0-3 3v6a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V5a3 3 0 0 0-3-3zM5 1a4 4 0 0 0-4 4v6a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4H5z"/>
+</svg></span>
+                            </div>
+                            <div class="col-sm-11">
+                                <b>About Project</b>
+                                <div class="aboutme">Used most basic Python libraries to implement one of the most popular Topic Modelling Technique, LDA(Latent Dirichlet Allocation), which can be used to find hidden topics present in the collection of documents</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-1">
+                                <span><svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-code-slash" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" d="M4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0zm-.999-3.124a.5.5 0 0 1 .33.625l-4 13a.5.5 0 0 1-.955-.294l4-13a.5.5 0 0 1 .625-.33z"/>
+</svg></span>
+                            </div>
+                            <div class="col-sm-11">
+                                <b>Technology/Framework</b>
+                                <ul>
+                                    <li>Python</li>
+                                    <li>NumPy</li>
+                                    <li>NLP</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
