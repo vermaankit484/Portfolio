@@ -96,14 +96,37 @@ hr {
 }
 
 hr {
-    margin-top: 4em; 
-    margin-bottom: 1em;
+    margin: 4em 0em 1em 0em;
 }
 
 #bwprojects {
     margin-top: 2em;
 }
 
-#project h1 {
+#project h1, #accomplishments h1 {
     color: #E1C340;
+}
+
+.carousel .item>img {
+    opacity: 0.65;
+}
+
+a#cf {
+    text-decoration: none;
+    color: darkmagenta;
+}
+
+a#cc {
+    text-decoration: none;
+    color: #FFBF00;
+}
+
+#others li {
+    padding-top: 7px;
+    list-style-type: none;
+}
+
+#others {
+    padding-left: 0;
+    margin-left: 10px;
 }
