@@ -111,8 +111,12 @@ hr {
     opacity: 0.65;
 }
 
-a#cf {
+#others a {
     text-decoration: none;
+    color: rgb(214,247,232);
+}
+
+a#cf {
     color: darkmagenta;
 }
 
