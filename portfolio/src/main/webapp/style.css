@@ -116,12 +116,11 @@ hr {
     color: rgb(214,247,232);
 }
 
-a#cf {
+#others .cf, #profile span {
     color: darkmagenta;
 }
 
-a#cc {
-    text-decoration: none;
+#others .cc {
     color: #FFBF00;
 }
 
@@ -133,4 +132,12 @@ a#cc {
 #others {
     padding-left: 0;
     margin-left: 10px;
+}
+
+#accomplishments img {
+    width:100%;
+}
+
+#accomplishments h1 {
+    margin-bottom: 1em;
 }
