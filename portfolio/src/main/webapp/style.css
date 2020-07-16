@@ -103,7 +103,7 @@ hr {
     margin-top: 2em;
 }
 
-#project h1, #accomplishments h1 {
+#project h1, #accomplishments h1, #skills h1 {
     color: #E1C340;
 }
 
@@ -140,4 +140,16 @@ hr {
 
 #accomplishments h1 {
     margin-bottom: 1em;
+}
+
+.eachSkill {
+    padding-left: 30%;
+}
+
+.stack, .eachSkill .list {
+    margin-top: 1em;
+}
+
+#skills > div {
+    margin-top: 2em;
 }
