@@ -153,3 +153,9 @@ hr {
 #skills > div {
     margin-top: 2em;
 }
+
+.list ul {
+    list-style-type:none; 
+    padding:0; 
+    margin:0;
+}
