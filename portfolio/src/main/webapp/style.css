@@ -159,6 +159,10 @@ hr {
     margin:0;
 }
 
+.list li {
+    padding-top: 6px;
+}
+
 .skillsBack{
   position: relative;
   opacity: 0.99;
