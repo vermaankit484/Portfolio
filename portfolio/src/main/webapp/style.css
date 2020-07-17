@@ -178,3 +178,7 @@ hr {
   background: url("images/setup.jpg") no-repeat 0 50%;
   opacity: 0.03;
 }
+
+input, textarea {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}

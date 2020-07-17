@@ -52,4 +52,7 @@ setInterval(() => {
     typeName();
 }, 7000);
 
-document.addEventListener("DOMContentLoaded", typeName);
+
+window.onload = () => {
+    typeName();
+}

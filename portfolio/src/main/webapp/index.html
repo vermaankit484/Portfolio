@@ -17,7 +17,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>                        
+                    <span class="icon-bar"></span>                     
                 </button>
                 <ul class="nav navbar-nav">
                     <li class="bars active" id="one"><a class="navtext navbar-brand" href="#profile">About Me!</a></li>
@@ -274,6 +274,23 @@ learning resources at a place - Article Section, Profile Visualizer, Coding Cale
                     </div>
                 </div>
             </div>
+        </div>
+        <hr width="100%">
+        <div id="comments">
+            <div class="container">
+                <form action="/user-comments" method="post" class="form-group">
+                    <div class="col-xs-10">
+                        <textarea class="form-control" rows="3" placeholder="Comment" name="comment"></textarea>
+                    </div>
+                    <div class="col-xs-2">
+                        <input type="submit" value="Submit" class="btn">
+                    </div>
+                    <div class="col-xs-6 col-md-3">
+                        <input type="text"  class="form-control"  placeholder="Name" name="name">
+                    </div>
+                </form>
+            </div>
+            
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>  
