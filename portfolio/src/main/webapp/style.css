@@ -96,14 +96,48 @@ hr {
 }
 
 hr {
-    margin-top: 4em; 
-    margin-bottom: 1em;
+    margin: 4em 0em 1em 0em;
 }
 
 #bwprojects {
     margin-top: 2em;
 }
 
-#project h1 {
+#project h1, #accomplishments h1 {
     color: #E1C340;
+}
+
+.carousel .item>img {
+    opacity: 0.65;
+}
+
+#others a {
+    text-decoration: none;
+    color: rgb(214,247,232);
+}
+
+#others .cf, #profile span {
+    color: darkmagenta;
+}
+
+#others .cc {
+    color: #FFBF00;
+}
+
+#others li {
+    padding-top: 7px;
+    list-style-type: none;
+}
+
+#others {
+    padding-left: 0;
+    margin-left: 10px;
+}
+
+#accomplishments img {
+    width:100%;
+}
+
+#accomplishments h1 {
+    margin-bottom: 1em;
 }
