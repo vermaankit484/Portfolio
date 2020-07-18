@@ -52,7 +52,32 @@ setInterval(() => {
     typeName();
 }, 7000);
 
+getComments = () => {
+    fetch('/user-comments').then(response => response.json()).then((response) => {
+        response.forEach((data) => {
+            console.log(data.name);
+            console.log(data.comment);
+            document.getElementById('commentList').appendChild(createListElement(data));
+        })
+    })
+}
+
+createListElement = (data) => {
+    const listElement = document.createElement('li');
+    listElement.innerText = data.comment;
+    listElement.className = 'list-group-item';
+    listElement.appendChild(createDivElement(data.name));
+    return listElement;
+}
+
+createDivElement = (name) => {
+    const DivElement = document.createElement('div');
+    DivElement.innerText = name;
+    DivElement.className = 'commentUser';
+    return DivElement;
+}
 
 window.onload = () => {
     typeName();
+    getComments();
 }

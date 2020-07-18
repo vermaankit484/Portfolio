@@ -179,6 +179,11 @@ hr {
   opacity: 0.03;
 }
 
-input, textarea {
+input, textarea, .list-group-item {
     background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.commentUser {
+    font-size: 13px;
+    color: rgb(132, 139, 151);
 }
