@@ -184,6 +184,10 @@ input, textarea, .list-group-item {
 }
 
 .commentUser {
-    font-size: 13px;
+    font-size: 14px;
     color: rgb(132, 139, 151);
+}
+
+.timestamp {
+    float: right;
 }

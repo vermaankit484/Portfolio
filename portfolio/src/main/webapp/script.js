@@ -55,8 +55,6 @@ setInterval(() => {
 getComments = () => {
     fetch('/user-comments').then(response => response.json()).then((response) => {
         response.forEach((data) => {
-            console.log(data.name);
-            console.log(data.comment);
             document.getElementById('commentList').appendChild(createListElement(data));
         })
     })
@@ -66,14 +64,20 @@ createListElement = (data) => {
     const listElement = document.createElement('li');
     listElement.innerText = data.comment;
     listElement.className = 'list-group-item';
-    listElement.appendChild(createDivElement(data.name));
+    listElement.appendChild(createDivElement(data.name, data.timestamp));
     return listElement;
 }
 
-createDivElement = (name) => {
+createDivElement = (name, timestamp) => {
     const DivElement = document.createElement('div');
-    DivElement.innerText = name;
-    DivElement.className = 'commentUser';
+    const nameElement = document.createElement('span');
+    nameElement.innerText = name;
+    nameElement.className = 'commentUser';
+    DivElement.appendChild(nameElement);
+    const timeStamp = document.createElement('span');
+    timeStamp.className = 'timestamp commentUser';
+    timeStamp.innerText = timeSince(timestamp);
+    DivElement.appendChild(timeStamp);
     return DivElement;
 }
 
@@ -81,3 +85,46 @@ window.onload = () => {
     typeName();
     getComments();
 }
+
+timeSince = (date) => {
+  if (typeof date !== 'object') {
+    date = new Date(date);
+  }
+
+  var seconds = Math.floor((new Date() - date) / 1000);
+  var intervalType;
+
+  var interval = Math.floor(seconds / 31536000);
+  if (interval >= 1) {
+    intervalType = 'year';
+  } else {
+    interval = Math.floor(seconds / 2592000);
+    if (interval >= 1) {
+      intervalType = 'month';
+    } else {
+      interval = Math.floor(seconds / 86400);
+      if (interval >= 1) {
+        intervalType = 'day';
+      } else {
+        interval = Math.floor(seconds / 3600);
+        if (interval >= 1) {
+          intervalType = "hour";
+        } else {
+          interval = Math.floor(seconds / 60);
+          if (interval >= 1) {
+            intervalType = "minute";
+          } else {
+            interval = seconds;
+            intervalType = "second";
+          }
+        }
+      }
+    }
+  }
+
+  if (interval > 1 || interval === 0) {
+    intervalType += 's';
+  }
+
+  return interval + ' ' + intervalType + ' ago';
+};
