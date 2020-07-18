@@ -75,7 +75,7 @@ createDivElement = (name, timestamp) => {
     nameElement.className = 'commentUser';
     DivElement.appendChild(nameElement);
     const timeStamp = document.createElement('span');
-    timeStamp.className = 'timestamp commentUser';
+    timeStamp.className = 'timeStamp commentUser';
     timeStamp.innerText = timeSince(timestamp);
     DivElement.appendChild(timeStamp);
     return DivElement;
