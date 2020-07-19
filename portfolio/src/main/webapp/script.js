@@ -81,10 +81,12 @@ createDivElement = (name, timestamp) => {
     return DivElement;
 }
 
-window.onload = () => {
+onloadEvents = () => {
     typeName();
     getComments();
 }
+
+document.addEventListener("DOMContentLoaded", onloadEvents);
 
 timeSince = (date) => {
   if (typeof date !== 'object') {
