@@ -107,7 +107,8 @@ hr {
 
 #project h1, 
 #accomplishments h1, 
-#skills h1 {
+#skills h1,
+#contact h1 {
     color: #E1C340;
 }
 
@@ -195,6 +196,19 @@ textarea,
     color: rgb(132, 139, 151);
 }
 
+#commentList {
+    padding-top: 1em;
+}
+
 .timeStamp {
     float: right;
+}
+
+#contact textarea,
+#contact input {
+    margin-top: 1em;
+}
+
+#contact img {
+    margin: 1em 0 0 1em;
 }
