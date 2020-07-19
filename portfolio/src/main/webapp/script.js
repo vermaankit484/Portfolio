@@ -39,7 +39,7 @@ let idx=0;
 let name='Ankit Verma';
 typeName = () => {
     if (idx < name.length) {
-        document.getElementById('name').innerHTML += name.charAt(idx);
+        document.getElementById('name').innerHTML = name.substring(0, idx + 1) + '<span aria-hidden="true" id="nameSpan"></span>';
         idx++;
         setTimeout(typeName, 100);
     }
