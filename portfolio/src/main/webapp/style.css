@@ -41,6 +41,17 @@ nav a {
     padding-top: 5em;
 }
 
+#nameSpan {
+  border-right: .05em solid;
+  animation: caret 1s steps(1) infinite;
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
 .content {
     color: rgb(214,247,232);
     font-size: 16px;
@@ -211,4 +222,8 @@ textarea,
 
 #contact img {
     margin: 1em 0 0 1em;
+}
+
+footer {
+    color: rgb(166, 173, 185);
 }
