@@ -6,6 +6,8 @@ import com.google.appengine.api.datastore.Entity;
 import com.google.appengine.api.datastore.PreparedQuery;
 import com.google.appengine.api.datastore.Query;
 import com.google.appengine.api.datastore.Query.SortDirection;
+import com.google.appengine.api.users.UserService;
+import com.google.appengine.api.users.UserServiceFactory;
 import com.google.gson.Gson;
 import com.google.sps.data.Comment;
 import java.io.IOException;
@@ -30,12 +32,12 @@ public class UserComments extends HttpServlet {
         List<Comment> CommentList= new ArrayList<Comment>();
 
         for (Entity commentEntity: resultComments.asIterable()) {
-            String name = (String) commentEntity.getProperty("name");
+            String email = (String) commentEntity.getProperty("email");
             String comment = (String) commentEntity.getProperty("comment");
             long id = (long) commentEntity.getKey().getId();
             long timestamp = (long) commentEntity.getProperty("timestamp");
 
-            Comment commentObj = new Comment(comment, name, id, timestamp);
+            Comment commentObj = new Comment(comment, email, id, timestamp);
             CommentList.add(commentObj);
         }
 
@@ -47,12 +49,13 @@ public class UserComments extends HttpServlet {
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String comment = request.getParameter("comment");
-        String name = request.getParameter("name");
+        UserService userService = UserServiceFactory.getUserService();
+        String email = userService.getCurrentUser().getEmail();
         long timestamp = System.currentTimeMillis();
 
         Entity commentEntity = new Entity("comments");
         commentEntity.setProperty("comment", comment);
-        commentEntity.setProperty("name", name);
+        commentEntity.setProperty("email", email);
         commentEntity.setProperty("timestamp", timestamp);
 
         DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
