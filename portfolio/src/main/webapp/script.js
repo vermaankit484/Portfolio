@@ -52,10 +52,27 @@ setInterval(() => {
     typeName();
 }, 7000);
 
+auth = () => {
+    fetch('/auth').then(response => response.json()).then((response) => {
+        if (response.isLogin) {
+            document.getElementById("commentBox").disabled = false;
+            document.getElementById("submitButton").disabled = false;
+            document.getElementById("commentBox").placeholder = "Comment";
+            document.getElementById("authLog").innerHTML = "<a href=" + response.logOutUrl + ">LogOut</a>";
+        } else {
+            document.getElementById("commentBox").disabled = true;
+            document.getElementById("submitButton").disabled = true;
+            document.getElementById("commentBox").placeholder = "Login to comment";
+            document.getElementById("authLog").innerHTML = "<a href=" + response.loginUrl + ">LogIn</a>";
+        }
+    })
+}
+
 getComments = () => {
     fetch('/user-comments').then(response => response.json()).then((response) => {
         response.forEach((data) => {
             document.getElementById('commentList').appendChild(createListElement(data));
+            console.log(data);
         })
     })
 }
@@ -64,29 +81,22 @@ createListElement = (data) => {
     const listElement = document.createElement('li');
     listElement.innerText = data.comment;
     listElement.className = 'list-group-item';
-    listElement.appendChild(createDivElement(data.name, data.timestamp));
+    listElement.appendChild(createDivElement(data.email, data.timestamp));
     return listElement;
 }
 
-createDivElement = (name, timestamp) => {
+createDivElement = (email, timestamp) => {
     const DivElement = document.createElement('div');
-    const nameElement = document.createElement('span');
-    nameElement.innerText = name;
-    nameElement.className = 'commentUser';
-    DivElement.appendChild(nameElement);
+    const emailElement = document.createElement('span');
+    emailElement.innerText = email;
+    emailElement.className = 'commentUser';
+    DivElement.appendChild(emailElement);
     const timeStamp = document.createElement('span');
     timeStamp.className = 'timeStamp commentUser';
     timeStamp.innerText = timeSince(timestamp);
     DivElement.appendChild(timeStamp);
     return DivElement;
 }
-
-onloadEvents = () => {
-    typeName();
-    getComments();
-}
-
-document.addEventListener("DOMContentLoaded", onloadEvents);
 
 timeSince = (date) => {
   if (typeof date !== 'object') {
@@ -130,3 +140,11 @@ timeSince = (date) => {
 
   return interval + ' ' + intervalType + ' ago';
 };
+
+onloadEvents = () => {
+    typeName();
+    auth();
+    getComments();
+}
+
+document.addEventListener("DOMContentLoaded", onloadEvents);

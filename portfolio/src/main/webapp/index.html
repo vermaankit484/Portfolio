@@ -29,6 +29,7 @@
                     <li class="bars"><a href="#accomplishments">Accomplishments</a></li>
                     <li class="bars"><a href="#skills">Skills</a></li>
                     <li class="bars"><a href="#contact">Contact</a></li>
+                    <li class="bars" id="authLog"></li>
                 </ul>
             </div>
         </div>
@@ -306,13 +307,10 @@ learning resources at a place - Article Section, Profile Visualizer, Coding Cale
             <div class="container">
                 <form action="/user-comments" method="post" class="form-group">
                     <div class="col-xs-10">
-                        <textarea class="form-control" rows="3" placeholder="Comment" name="comment"></textarea>
+                        <textarea class="form-control" rows="3" placeholder="Comment" name="comment" id="commentBox" disabled></textarea>
                     </div>
                     <div class="col-xs-2">
-                        <input type="submit" value="Submit" class="btn">
-                    </div>
-                    <div class="col-xs-6 col-md-3">
-                        <input type="text"  class="form-control"  placeholder="Name" name="name">
+                        <input type="submit" value="Submit" class="btn" id="submitButton" disabled>
                     </div>
                 </form>
             </div>
